@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="indianElucid biology Solutions - Case Studies and Industries Served" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Solutions | indianElucid biology</title>
+<link rel="stylesheet" href="css/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="main-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo" aria-label="indianElucid biology Home">
+      <img src="assets/logo.png" alt="indianElucid biology Logo" />
+      <span>indianElucid biology</span>
+    </a>
+    <nav aria-label="Main Navigation">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="has-submenu">
+          <a href="services.html" aria-haspopup="true">Services</a>
+          <ul class="submenu">
+            <li><a href="services.html#bioinformatics">Bioinformatics Analysis</a></li>
+            <li><a href="services.html#biotech">Biotechnology & R&D</a></li>
+            <li><a href="services.html#genomic">Genomic & Proteomic Services</a></li>
+            <li><a href="services.html#custom-data">Custom Data Pipelines</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="solutions.html" class="active" aria-haspopup="true">Solutions</a>
+          <ul class="submenu">
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#industries">Industries Served</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="resources.html" aria-haspopup="true">Resources</a>
+          <ul class="submenu">
+            <li><a href="resources.html#blog">Blog & Insights</a></li>
+            <li><a href="resources.html#whitepapers">Whitepapers & eBooks</a></li>
+            <li><a href="resources.html#faqs">FAQs</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="cta-btn">Get a Quote</a>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Solutions</h1>
+    <p>Discover how our work drives progress across multiple sectors.</p>
+  </div>
+</section>
+
+<section id="case-studies" class="case-studies container">
+  <h2>Case Studies</h2>
+  <p>Explore selected success stories where we’ve overcome complex challenges to deliver measurable results.</p>
+  <div class="case-cards">
+    <div class="case-card">
+      <img src="assets/case-study1.jpg" alt="Case Study 1">
+      <h3>Accelerating Drug Discovery</h3>
+      <p>Problem: Long R&D timelines and inconclusive target validation slowed a pharma client's drug pipeline.</p>
+      <p>Solution: We developed a custom bioinformatics pipeline integrating multi-omics data to identify robust biomarkers.</p>
+      <p>Result: Achieved a 30% reduction in target validation time, speeding clinical candidate selection.</p>
+    </div>
+    <div class="case-card">
+      <img src="assets/case-study2.jpg" alt="Case Study 2">
+      <h3>Scalable Genomic Analysis for Agriculture</h3>
+      <p>Problem: A global agritech firm struggled with analyzing thousands of genomic samples to optimize crop yields.</p>
+      <p>Solution: We built a scalable, cloud-based pipeline to handle large-volume NGS data and integrated machine learning for trait prediction.</p>
+      <p>Result: Cut analysis time by 50% and delivered actionable insights for crop improvement strategies.</p>
+    </div>
+    <div class="case-card">
+      <img src="assets/case-study3.jpg" alt="Case Study 3">
+      <h3>Precision Diagnostics Development</h3>
+      <p>Problem: A diagnostics startup needed rapid prototyping of assays for a novel infectious disease biomarker.</p>
+      <p>Solution: Our biotech team engineered a custom assay with protein purification and validation protocols.</p>
+      <p>Result: Reduced assay development time from months to weeks, enabling faster regulatory submission.</p>
+    </div>
+  </div>
+</section>
+
+<section id="industries" class="industries container">
+  <h2>Industries Served</h2>
+  <p>We support a diverse range of sectors, applying our expertise to unique research and development needs.</p>
+  <ul class="industry-list">
+    <li>Pharmaceuticals & Biotech Startups</li>
+    <li>Academic Research Institutions</li>
+    <li>Clinical Diagnostics & Healthcare</li>
+    <li>Agriculture & Food Biotechnology</li>
+    <li>Medical Device & Diagnostic Tool Companies</li>
+  </ul>
+</section>
+
+<footer class="footer">
+  <div class="footer-content container">
+    <div class="footer-col">
+      <img src="assets/logo.png" alt="indianElucid biology Logo" class="footer-logo" />
+      <p>&copy; 2024 indianElucid biology. All Rights Reserved.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="solutions.html" class="active">Solutions</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter/X</a>
+        <a href="#" aria-label="ResearchGate">ResearchGate</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <ul class="legal-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+  const nav = document.querySelector('.main-header nav ul.menu');
+  nav.classList.toggle('open');
+}
+</script>
+</body>
+</html>
