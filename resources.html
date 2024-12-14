@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="Resources from indianElucid biology - Blog, Whitepapers, FAQs" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Resources | indianElucid biology</title>
+<link rel="stylesheet" href="css/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="main-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo" aria-label="indianElucid biology Home">
+      <img src="assets/logo.png" alt="indianElucid biology Logo" />
+      <span>indianElucid biology</span>
+    </a>
+    <nav aria-label="Main Navigation">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="has-submenu">
+          <a href="services.html" aria-haspopup="true">Services</a>
+          <ul class="submenu">
+            <li><a href="services.html#bioinformatics">Bioinformatics Analysis</a></li>
+            <li><a href="services.html#biotech">Biotechnology & R&D</a></li>
+            <li><a href="services.html#genomic">Genomic & Proteomic Services</a></li>
+            <li><a href="services.html#custom-data">Custom Data Pipelines</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="solutions.html" aria-haspopup="true">Solutions</a>
+          <ul class="submenu">
+            <li><a href="solutions.html#case-studies">Case Studies</a></li>
+            <li><a href="solutions.html#industries">Industries Served</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="resources.html" class="active" aria-haspopup="true">Resources</a>
+          <ul class="submenu">
+            <li><a href="#blog">Blog & Insights</a></li>
+            <li><a href="#whitepapers">Whitepapers & eBooks</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="cta-btn">Get a Quote</a>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Resources</h1>
+    <p>Empowering you with knowledge, insights, and best practices.</p>
+  </div>
+</section>
+
+<section id="blog" class="blog-insights container">
+  <h2>Blog & Insights</h2>
+  <div class="blog-cards">
+    <div class="blog-card">
+      <img src="assets/blog1.jpg" alt="Blog Post 1">
+      <h3>Leveraging AI in Bioinformatics</h3>
+      <p>Discover how machine learning and AI are transforming genomic data analysis, streamlining interpretation and accelerating breakthroughs.</p>
+      <a href="#" class="blog-cta">Read More</a>
+    </div>
+    <div class="blog-card">
+      <img src="assets/blog2.jpg" alt="Blog Post 2">
+      <h3>Best Practices for NGS Data Management</h3>
+      <p>Learn the strategies and tools that ensure efficient, secure, and compliant handling of large-scale NGS datasets.</p>
+      <a href="#" class="blog-cta">Read More</a>
+    </div>
+  </div>
+</section>
+
+<section id="whitepapers" class="whitepapers container">
+  <h2>Whitepapers & eBooks</h2>
+  <div class="whitepaper-list">
+    <div class="whitepaper-item">
+      <img src="assets/whitepaper1.jpg" alt="Whitepaper 1">
+      <h3>Ensuring Data Security in Bioinformatics</h3>
+      <p>Learn how to meet compliance standards and protect sensitive genomic information across global research collaborations.</p>
+      <a href="#" class="wp-download-cta">Download</a>
+    </div>
+    <div class="whitepaper-item">
+      <img src="assets/whitepaper2.jpg" alt="Whitepaper 2">
+      <h3>Multi-Omics Integration: The Future of Research</h3>
+      <p>Explore strategies for integrating genomic, proteomic, and metabolomic data to gain a holistic view of biological systems.</p>
+      <a href="#" class="wp-download-cta">Download</a>
+    </div>
+  </div>
+</section>
+
+<section id="faqs" class="faqs container">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">What is the typical turnaround time for an NGS analysis?</button>
+    <div class="faq-answer">
+      <p>Typical turnaround depends on project complexity and data volume. Most NGS analyses complete in 2-4 weeks, with expedited services available upon request.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">How do you ensure data confidentiality and compliance?</button>
+    <div class="faq-answer">
+      <p>We implement ISO and GDPR-compliant data handling protocols. All data transfers are encrypted, access is restricted, and workflows undergo regular audits.</p>
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false" onclick="toggleFAQ(this)">Can you integrate with our existing LIMS or cloud environment?</button>
+    <div class="faq-answer">
+      <p>Yes, we specialize in building custom data pipelines that seamlessly integrate with your existing Laboratory Information Management Systems and cloud platforms.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content container">
+    <div class="footer-col">
+      <img src="assets/logo.png" alt="indianElucid biology Logo" class="footer-logo" />
+      <p>&copy; 2024 indianElucid biology. All Rights Reserved.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="resources.html" class="active">Resources</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter/X</a>
+        <a href="#" aria-label="ResearchGate">ResearchGate</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <ul class="legal-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+  const nav = document.querySelector('.main-header nav ul.menu');
+  nav.classList.toggle('open');
+}
+
+function toggleFAQ(button) {
+  const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+  button.setAttribute('aria-expanded', !expanded);
+  const answer = button.nextElementSibling;
+  answer.style.display = expanded ? 'none' : 'block';
+}
+</script>
+</body>
+</html>
