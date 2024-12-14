@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="indianElucid biology - Advanced Bioinformatics & Biotechnology Solutions for Accelerated Discovery." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>indianElucid biology</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="main-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo" aria-label="indianElucid biology Home">
+      <img src="assets/logo.png" alt="indianElucid biology Logo" />
+      <span>indianElucid biology</span>
+    </a>
+    <nav aria-label="Main Navigation">
+      <ul class="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="has-submenu">
+          <a href="services.html" aria-haspopup="true">Services</a>
+          <ul class="submenu" aria-label="Services">
+            <li><a href="services.html#bioinformatics">Bioinformatics Analysis</a></li>
+            <li><a href="services.html#biotech">Biotechnology & R&D</a></li>
+            <li><a href="services.html#genomic">Genomic & Proteomic Services</a></li>
+            <li><a href="services.html#custom-data">Custom Data Pipelines</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="solutions.html" aria-haspopup="true">Solutions</a>
+          <ul class="submenu" aria-label="Solutions">
+            <li><a href="solutions.html#case-studies">Case Studies</a></li>
+            <li><a href="solutions.html#industries">Industries Served</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="resources.html" aria-haspopup="true">Resources</a>
+          <ul class="submenu" aria-label="Resources">
+            <li><a href="resources.html#blog">Blog & Insights</a></li>
+            <li><a href="resources.html#whitepapers">Whitepapers & eBooks</a></li>
+            <li><a href="resources.html#faqs">FAQs</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="cta-btn">Get a Quote</a>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" style="background-image: url('assets/hero-bg.jpg');">
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <h1>Empowering Life Sciences with Data-Driven Insights</h1>
+    <p class="subhead">At indianElucid biology, we harness advanced bioinformatics & biotechnology to accelerate research, discovery, and innovation.</p>
+    <a href="services.html" class="hero-cta">Explore Our Services</a>
+    <div class="core-competencies">
+      <div class="competency">
+        <img src="assets/icon-analysis.svg" alt="Analysis Icon" />
+        <p>High-throughput Data Analysis</p>
+      </div>
+      <div class="competency">
+        <img src="assets/icon-pipeline.svg" alt="Pipeline Icon" />
+        <p>Custom Pipeline Development</p>
+      </div>
+      <div class="competency">
+        <img src="assets/icon-guidance.svg" alt="Guidance Icon" />
+        <p>Expert Guidance & Consulting</p>
+      </div>
+      <div class="competency">
+        <img src="assets/icon-secure.svg" alt="Security Icon" />
+        <p>Secure & Compliant Infrastructure</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-about container">
+  <h2>Driving Innovation Across the Life Sciences Spectrum</h2>
+  <p>
+    indianElucid biology is committed to bridging the gap between groundbreaking biological research and transformative data insights. Our interdisciplinary team of scientists, bioinformaticians, and biotech engineers collaborates with institutions worldwide to turn complex data into actionable knowledge.
+  </p>
+  <a href="about.html" class="learn-more">Learn More About Us</a>
+</section>
+
+<section class="featured-services container">
+  <h2>Our Core Services</h2>
+  <div class="service-cards">
+    <div class="service-card">
+      <img src="assets/service-bioinformatics.jpg" alt="Bioinformatics Analysis" />
+      <h3>Bioinformatics Analysis</h3>
+      <p>From RNA-Seq to multi-omics, we deploy state-of-the-art pipelines and machine learning tools to interpret genomic and proteomic data.</p>
+      <a href="services.html#bioinformatics" class="service-cta">Learn More</a>
+    </div>
+    <div class="service-card">
+      <img src="assets/service-biotech.jpg" alt="Biotechnology & R&D" />
+      <h3>Biotechnology & R&D</h3>
+      <p>Accelerate product development through custom assay design, cell line engineering, protein expression, and purification strategies.</p>
+      <a href="services.html#biotech" class="service-cta">Learn More</a>
+    </div>
+    <div class="service-card">
+      <img src="assets/service-genomic.jpg" alt="Genomic & Proteomic Services" />
+      <h3>Genomic & Proteomic Services</h3>
+      <p>Advanced NGS analysis, variant calling, proteomic quantification, and microbiome profiling tailored to your research goals.</p>
+      <a href="services.html#genomic" class="service-cta">Learn More</a>
+    </div>
+    <div class="service-card">
+      <img src="assets/service-custom.jpg" alt="Custom Data Pipelines" />
+      <h3>Custom Data Pipelines</h3>
+      <p>Build scalable, automated workflows with integrated LIMS solutions and cloud computing for seamless data management.</p>
+      <a href="services.html#custom-data" class="service-cta">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section class="highlighted-solutions container">
+  <h2>Real-World Impact</h2>
+  <p>Our solutions have catalyzed drug discovery pipelines, simplified genomic analyses, and empowered research at leading institutions.</p>
+  <a href="solutions.html" class="solutions-cta">View Case Studies</a>
+</section>
+
+<section class="testimonials container">
+  <h2>What Our Partners Say</h2>
+  <div class="testimonial-cards">
+    <div class="testimonial-card">
+      <p>"indianElucid biology transformed our raw sequencing data into clear insights, speeding up our research by months."</p>
+      <h4>- Dr. A. Verma, Pharmaceutical R&D Lead</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>"Their custom pipelines integrated seamlessly with our lab workflows, freeing our team to focus on discovery rather than data wrangling."</p>
+      <h4>- Prof. L. Shah, Genomics Lab Director</h4>
+    </div>
+  </div>
+</section>
+
+<section class="resources-preview container">
+  <h2>Insights & Resources</h2>
+  <p>Stay current with evolving biotechnologies and data analysis trends through our insightful blog posts, whitepapers, and FAQs.</p>
+  <div class="resources-links">
+    <a href="resources.html#blog">Blog &amp; Insights</a>
+    <a href="resources.html#whitepapers">Whitepapers &amp; eBooks</a>
+    <a href="resources.html#faqs">FAQs</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content container">
+    <div class="footer-col">
+      <img src="assets/logo.png" alt="indianElucid biology Logo" class="footer-logo" />
+      <p>&copy; 2024 indianElucid biology. All Rights Reserved.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter/X</a>
+        <a href="#" aria-label="ResearchGate">ResearchGate</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <ul class="legal-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+  const nav = document.querySelector('.main-header nav ul.menu');
+  nav.classList.toggle('open');
+}
+</script>
+</body>
+</html>
 
