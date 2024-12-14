@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="indianElucid biology Services - Bioinformatics Analysis, Biotechnology & R&D, Genomic & Proteomic Services, Custom Data Pipelines." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Services | indianElucid biology</title>
+<link rel="stylesheet" href="css/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="main-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo" aria-label="indianElucid biology Home">
+      <img src="assets/logo.png" alt="indianElucid biology Logo" />
+      <span>indianElucid biology</span>
+    </a>
+    <nav aria-label="Main Navigation">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="has-submenu">
+          <a href="services.html" class="active" aria-haspopup="true">Services</a>
+          <ul class="submenu">
+            <li><a href="#bioinformatics">Bioinformatics Analysis</a></li>
+            <li><a href="#biotech">Biotechnology & R&D</a></li>
+            <li><a href="#genomic">Genomic & Proteomic Services</a></li>
+            <li><a href="#custom-data">Custom Data Pipelines</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="solutions.html">Solutions</a>
+          <ul class="submenu">
+            <li><a href="solutions.html#case-studies">Case Studies</a></li>
+            <li><a href="solutions.html#industries">Industries Served</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="resources.html">Resources</a>
+          <ul class="submenu">
+            <li><a href="resources.html#blog">Blog & Insights</a></li>
+            <li><a href="resources.html#whitepapers">Whitepapers & eBooks</a></li>
+            <li><a href="resources.html#faqs">FAQs</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="cta-btn">Get a Quote</a>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Services</h1>
+    <p>Cutting-edge solutions to transform biological data into impactful discoveries.</p>
+  </div>
+</section>
+
+<section class="services-overview container">
+  <p>Our comprehensive range of services covers every stage of the research and development lifecycle, from raw data analysis to scalable pipeline implementation.</p>
+</section>
+
+<section id="bioinformatics" class="service-detail container">
+  <h2>Bioinformatics Analysis</h2>
+  <img src="assets/service-bioinformatics.jpg" alt="Bioinformatics Analysis">
+  <p>Our bioinformatics expertise spans transcriptomics, metagenomics, epigenomics, and multi-omics integration. We employ state-of-the-art statistical models, machine learning algorithms, and visualization tools to deliver insights that drive discovery. Our analysts ensure data quality control (QC), normalization, differential expression analysis, and results interpretation tailored to your research questions.</p>
+</section>
+
+<section id="biotech" class="service-detail container">
+  <h2>Biotechnology & R&D</h2>
+  <img src="assets/service-biotech.jpg" alt="Biotechnology & R&D">
+  <p>We accelerate R&D workflows through custom assay design, gene editing, molecular cloning, and protein engineering. Our biotechnology team works closely with you to develop scalable protocols that ensure reproducible results, enabling faster prototyping and product development in therapeutics, diagnostics, and beyond.</p>
+</section>
+
+<section id="genomic" class="service-detail container">
+  <h2>Genomic & Proteomic Services</h2>
+  <img src="assets/service-genomic.jpg" alt="Genomic & Proteomic Services">
+  <p>From next-generation sequencing (NGS) data processing to variant calling, from proteomics quantification to microbiome profiling, we provide end-to-end solutions. Our methods ensure accurate gene expression profiling, SNP/INDEL detection, functional annotation, and pathway analysis, giving you a complete molecular portrait of your biological system.</p>
+</section>
+
+<section id="custom-data" class="service-detail container">
+  <h2>Custom Data Pipelines</h2>
+  <img src="assets/service-custom.jpg" alt="Custom Data Pipelines">
+  <p>We build tailored data pipelines to automate analysis workflows, integrate LIMS systems, and leverage cloud computing for scalability. Streamline your data handling, improve turnaround times, and enhance reproducibility with our custom pipeline solutions designed for long-term sustainability and growth.</p>
+</section>
+
+<footer class="footer">
+  <div class="footer-content container">
+    <div class="footer-col">
+      <img src="assets/logo.png" alt="indianElucid biology Logo" class="footer-logo" />
+      <p>&copy; 2024 indianElucid biology. All Rights Reserved.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter/X</a>
+        <a href="#" aria-label="ResearchGate">ResearchGate</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <ul class="legal-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+  const nav = document.querySelector('.main-header nav ul.menu');
+  nav.classList.toggle('open');
+}
+</script>
+</body>
+</html>
