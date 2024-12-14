@@ -5,13 +5,380 @@
 <meta name="description" content="indianElucid biology - Advanced Bioinformatics & Biotechnology Solutions for Accelerated Discovery." />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>indianElucid biology</title>
-<link rel="stylesheet" href="css/style.css" />
+
+<!-- Bootstrap CSS from CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5y8m2L45dvo8+3xyzBSBaIrGGeJslidX4xNL7xZ1PgEqKNzNA999jLnk6Yv9qKSp" crossorigin="anonymous">
+
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+<style>
+/* Custom CSS */
+
+/* Base Typography & Body */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto Slab', serif;
+  color: #2a2a2a;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0066cc;
+}
+a:hover { text-decoration: underline; }
+
+/* Header & Navigation */
+.main-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: #00aa88;
+}
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  position: relative;
+}
+.menu li a {
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.menu li a:hover {
+  color: #0066cc;
+}
+.menu li a.active {
+  color: #00aa88;
+}
+.has-submenu:hover .submenu {
+  display: block;
+}
+.submenu {
+  display: none;
+  background: #ffffff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  min-width: 220px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.submenu li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.submenu li a:hover {
+  background: #f2f2f2;
+}
+
+.cta-btn {
+  background: #00aa88;
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.cta-btn:hover {
+  background: #008f6e;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.mobile-menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 5px 0;
+  transition: 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-overlay {
+  position: absolute;
+  top:0;left:0;width:100%;height:100%;
+  background: rgba(0,0,0,0.45);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-title {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+.subhead {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+.hero-cta {
+  background: #00aa88;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+}
+.hero-cta:hover {
+  background: #008f6e;
+}
+.core-competencies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+.core-competencies .competency {
+  text-align: center;
+  max-width: 180px;
+}
+
+/* Sections */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.home-about p, .highlighted-solutions p, .resources-preview p {
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.learn-more, .solutions-cta, .service-cta {
+  display: inline-block;
+  background: #0066cc;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+.learn-more:hover, .solutions-cta:hover, .service-cta:hover {
+  background: #004a99;
+}
+
+/* Featured Services */
+.featured-services .service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.service-card img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.service-card h3 {
+  margin-top: 0;
+}
+
+/* Testimonials */
+.testimonials .testimonial-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 40px auto;
+}
+.testimonial-card {
+  background: #f0f7fa;
+  padding: 20px;
+  border-left: 4px solid #00aa88;
+  border-radius: 4px;
+}
+.testimonial-card p {
+  font-style: italic;
+}
+
+/* Resources Preview */
+.resources-links a {
+  display: inline-block;
+  background: #00aa88;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 10px;
+  transition: background 0.3s ease;
+}
+.resources-links a:hover {
+  background: #008f6e;
+}
+
+/* Footer */
+.footer {
+  background: #2a2a2a;
+  color: #ffffff;
+  font-size: 0.9rem;
+  padding: 40px 0;
+  margin-top: 60px;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+.footer-logo {
+  height: 40px;
+  margin-bottom: 15px;
+}
+.footer-col h4 {
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-col ul li {
+  margin-bottom: 5px;
+}
+.footer-col ul li a {
+  color: #ffffff;
+  font-weight: 400;
+}
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+.social-icons a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  margin-right: 10px;
+}
+.icon-linkedin {
+  background-image: url('assets/icon-linkedin.svg');
+}
+.icon-twitter {
+  background-image: url('assets/icon-twitter.svg');
+}
+.icon-researchgate {
+  background-image: url('assets/icon-researchgate.svg');
+}
+.legal-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    position: absolute;
+    top:70px;
+    right: 0;
+    width: 60%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding:20px;
+  }
+  .menu.open {
+    display: flex;
+  }
+  .submenu {
+    position: relative;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero .subhead {
+    font-size: 1rem;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="main-header">
-  <div class="container nav-container">
+  <div class="nav-container">
     <a href="index.html" class="logo" aria-label="indianElucid biology Home">
       <img src="assets/logo.png" alt="indianElucid biology Logo" />
       <span>indianElucid biology</span>
@@ -54,27 +421,27 @@
   </div>
 </header>
 
-<section class="hero" style="background-image: url('assets/hero-bg.jpg');">
+<section class="hero" style="background-image: url('assets/hero-bg.jpg');" role="banner">
   <div class="hero-overlay"></div>
-  <div class="hero-content container">
-    <h1>Empowering Life Sciences with Data-Driven Insights</h1>
-    <p class="subhead">At indianElucid biology, we harness advanced bioinformatics & biotechnology to accelerate research, discovery, and innovation.</p>
+  <div class="hero-content">
+    <h1 class="hero-title">Empowering Life Sciences with Data-Driven Insights</h1>
+    <p class="subhead">At indianElucid biology, we leverage cutting-edge bioinformatics &amp; biotechnology to accelerate research, catalyze discovery, and fuel innovation worldwide.</p>
     <a href="services.html" class="hero-cta">Explore Our Services</a>
     <div class="core-competencies">
       <div class="competency">
-        <img src="assets/icon-analysis.svg" alt="Analysis Icon" />
+        <img src="assets/icon-analysis.svg" alt="High-throughput Data Analysis" />
         <p>High-throughput Data Analysis</p>
       </div>
       <div class="competency">
-        <img src="assets/icon-pipeline.svg" alt="Pipeline Icon" />
+        <img src="assets/icon-pipeline.svg" alt="Custom Pipeline Development" />
         <p>Custom Pipeline Development</p>
       </div>
       <div class="competency">
-        <img src="assets/icon-guidance.svg" alt="Guidance Icon" />
+        <img src="assets/icon-guidance.svg" alt="Expert Guidance & Consulting" />
         <p>Expert Guidance & Consulting</p>
       </div>
       <div class="competency">
-        <img src="assets/icon-secure.svg" alt="Security Icon" />
+        <img src="assets/icon-secure.svg" alt="Secure & Compliant Infrastructure" />
         <p>Secure & Compliant Infrastructure</p>
       </div>
     </div>
@@ -84,7 +451,7 @@
 <section class="home-about container">
   <h2>Driving Innovation Across the Life Sciences Spectrum</h2>
   <p>
-    indianElucid biology is committed to bridging the gap between groundbreaking biological research and transformative data insights. Our interdisciplinary team of scientists, bioinformaticians, and biotech engineers collaborates with institutions worldwide to turn complex data into actionable knowledge.
+    At indianElucid biology, our mission is to translate complex biological data into transformative insights. Our interdisciplinary team—comprising top-tier scientists, seasoned bioinformaticians, and biotech engineers—collaborates with institutions worldwide, shaping the future of diagnostics, therapeutics, and sustainable solutions.
   </p>
   <a href="about.html" class="learn-more">Learn More About Us</a>
 </section>
@@ -95,25 +462,25 @@
     <div class="service-card">
       <img src="assets/service-bioinformatics.jpg" alt="Bioinformatics Analysis" />
       <h3>Bioinformatics Analysis</h3>
-      <p>From RNA-Seq to multi-omics, we deploy state-of-the-art pipelines and machine learning tools to interpret genomic and proteomic data.</p>
+      <p>Dive deep into multi-omics data with advanced pipelines, AI-driven interpretation, and intuitive visualization tools.</p>
       <a href="services.html#bioinformatics" class="service-cta">Learn More</a>
     </div>
     <div class="service-card">
       <img src="assets/service-biotech.jpg" alt="Biotechnology & R&D" />
       <h3>Biotechnology & R&D</h3>
-      <p>Accelerate product development through custom assay design, cell line engineering, protein expression, and purification strategies.</p>
+      <p>Innovate faster with custom assays, cell line engineering, and molecular solutions that accelerate product development.</p>
       <a href="services.html#biotech" class="service-cta">Learn More</a>
     </div>
     <div class="service-card">
       <img src="assets/service-genomic.jpg" alt="Genomic & Proteomic Services" />
       <h3>Genomic & Proteomic Services</h3>
-      <p>Advanced NGS analysis, variant calling, proteomic quantification, and microbiome profiling tailored to your research goals.</p>
+      <p>Uncover genetic variations, proteomic patterns, and microbiome insights to guide breakthroughs in medicine and agriculture.</p>
       <a href="services.html#genomic" class="service-cta">Learn More</a>
     </div>
     <div class="service-card">
       <img src="assets/service-custom.jpg" alt="Custom Data Pipelines" />
       <h3>Custom Data Pipelines</h3>
-      <p>Build scalable, automated workflows with integrated LIMS solutions and cloud computing for seamless data management.</p>
+      <p>Automate workflows, integrate seamlessly with LIMS, and scale computing resources for efficient, reproducible analytics.</p>
       <a href="services.html#custom-data" class="service-cta">Learn More</a>
     </div>
   </div>
@@ -121,7 +488,7 @@
 
 <section class="highlighted-solutions container">
   <h2>Real-World Impact</h2>
-  <p>Our solutions have catalyzed drug discovery pipelines, simplified genomic analyses, and empowered research at leading institutions.</p>
+  <p>Our tailored solutions have accelerated drug discovery timelines, simplified genomic analyses, and powered cutting-edge research globally.</p>
   <a href="solutions.html" class="solutions-cta">View Case Studies</a>
 </section>
 
@@ -129,11 +496,11 @@
   <h2>What Our Partners Say</h2>
   <div class="testimonial-cards">
     <div class="testimonial-card">
-      <p>"indianElucid biology transformed our raw sequencing data into clear insights, speeding up our research by months."</p>
+      <p>"indianElucid biology transformed our raw sequencing data into actionable insights, shaving months off our R&D pipeline."</p>
       <h4>- Dr. A. Verma, Pharmaceutical R&D Lead</h4>
     </div>
     <div class="testimonial-card">
-      <p>"Their custom pipelines integrated seamlessly with our lab workflows, freeing our team to focus on discovery rather than data wrangling."</p>
+      <p>"Their custom pipelines integrated flawlessly with our lab workflows, allowing our team to focus on discovery rather than data management."</p>
       <h4>- Prof. L. Shah, Genomics Lab Director</h4>
     </div>
   </div>
@@ -141,7 +508,7 @@
 
 <section class="resources-preview container">
   <h2>Insights & Resources</h2>
-  <p>Stay current with evolving biotechnologies and data analysis trends through our insightful blog posts, whitepapers, and FAQs.</p>
+  <p>Stay at the forefront of biotech trends. Explore our blog, download in-depth whitepapers, and review FAQs for expert guidance.</p>
   <div class="resources-links">
     <a href="resources.html#blog">Blog &amp; Insights</a>
     <a href="resources.html#whitepapers">Whitepapers &amp; eBooks</a>
@@ -152,7 +519,9 @@
 <footer class="footer">
   <div class="footer-content container">
     <div class="footer-col">
-      <img src="assets/logo.png" alt="indianElucid biology Logo" class="footer-logo" />
+      <a href="index.html" class="footer-logo-link">
+        <img src="assets/logo.png" alt="indianElucid biology Logo" class="footer-logo" />
+      </a>
       <p>&copy; 2024 indianElucid biology. All Rights Reserved.</p>
     </div>
     <div class="footer-col">
@@ -168,12 +537,13 @@
     <div class="footer-col">
       <h4>Follow Us</h4>
       <div class="social-icons">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Twitter">Twitter/X</a>
-        <a href="#" aria-label="ResearchGate">ResearchGate</a>
+        <a href="#" aria-label="LinkedIn" class="social-icon icon-linkedin"></a>
+        <a href="#" aria-label="Twitter" class="social-icon icon-twitter"></a>
+        <a href="#" aria-label="ResearchGate" class="social-icon icon-researchgate"></a>
       </div>
     </div>
     <div class="footer-col">
+      <h4>Legal</h4>
       <ul class="legal-links">
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Terms of Service</a></li>
@@ -181,6 +551,9 @@
     </div>
   </div>
 </footer>
+
+<!-- Bootstrap JS from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-3ElF3NtafbEwPF7GqRWy4ZkEr3Ib2NoyhoLFmfFFkRnzfCadroWSkQoaAfjdhr4h" crossorigin="anonymous"></script>
 
 <script>
 function toggleMobileMenu() {
@@ -190,4 +563,3 @@ function toggleMobileMenu() {
 </script>
 </body>
 </html>
-
