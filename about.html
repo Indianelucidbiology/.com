@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="About indianElucid biology - Our mission, vision, and leadership team." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us | indianElucid biology</title>
+<link rel="stylesheet" href="css/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="main-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo" aria-label="indianElucid biology Home">
+      <img src="assets/logo.png" alt="indianElucid biology Logo" />
+      <span>indianElucid biology</span>
+    </a>
+    <nav aria-label="Main Navigation">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li class="has-submenu">
+          <a href="services.html" aria-haspopup="true">Services</a>
+          <ul class="submenu">
+            <li><a href="services.html#bioinformatics">Bioinformatics Analysis</a></li>
+            <li><a href="services.html#biotech">Biotechnology & R&D</a></li>
+            <li><a href="services.html#genomic">Genomic & Proteomic Services</a></li>
+            <li><a href="services.html#custom-data">Custom Data Pipelines</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="solutions.html" aria-haspopup="true">Solutions</a>
+          <ul class="submenu">
+            <li><a href="solutions.html#case-studies">Case Studies</a></li>
+            <li><a href="solutions.html#industries">Industries Served</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="resources.html" aria-haspopup="true">Resources</a>
+          <ul class="submenu">
+            <li><a href="resources.html#blog">Blog & Insights</a></li>
+            <li><a href="resources.html#whitepapers">Whitepapers & eBooks</a></li>
+            <li><a href="resources.html#faqs">FAQs</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="cta-btn">Get a Quote</a>
+    <button class="mobile-menu-toggle" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>About Us</h1>
+    <p>At the forefront of biotechnology and data science, we're committed to empowering global research communities.</p>
+  </div>
+</section>
+
+<section class="about-overview container">
+  <h2>Our Mission & Vision</h2>
+  <p>
+    Our mission is to accelerate breakthroughs in life sciences by translating intricate biological data into actionable insights. We envision a future where data-driven biotech solutions streamline R&D, shorten discovery timelines, and enhance healthcare globally. 
+  </p>
+</section>
+
+<section class="leadership container">
+  <h2>Leadership Team</h2>
+  <p>Meet the experts guiding our vision and ensuring excellence in every project.</p>
+  <div class="leaders">
+    <div class="leader">
+      <img src="assets/leader1.jpg" alt="Dr. Priya Rao">
+      <h3>Dr. Priya Rao</h3>
+      <p>Chief Scientific Officer<br>Expert in Omics & Integrated Bioinformatics</p>
+    </div>
+    <div class="leader">
+      <img src="assets/leader2.jpg" alt="Dr. Suresh Mehta">
+      <h3>Dr. Suresh Mehta</h3>
+      <p>Head of Biotechnology R&D<br>Specialist in Protein Engineering & Synthetic Biology</p>
+    </div>
+    <div class="leader">
+      <img src="assets/leader3.jpg" alt="Dr. Kavita Singh">
+      <h3>Dr. Kavita Singh</h3>
+      <p>Director of Data Science<br>Machine Learning & AI in Genomic Data Analysis</p>
+    </div>
+  </div>
+</section>
+
+<section class="quality-standards container">
+  <h2>Quality & Compliance</h2>
+  <p>
+    At indianElucid biology, we adhere to rigorous quality standards including ISO and GLP/GCP guidelines, ensuring GDPR compliance for data privacy. We partner with reputable institutions, continuously refining our methods and technologies to deliver verifiable, high-quality results.
+  </p>
+</section>
+
+<footer class="footer">
+  <div class="footer-content container">
+    <div class="footer-col">
+      <img src="assets/logo.png" alt="indianElucid biology Logo" class="footer-logo" />
+      <p>&copy; 2024 indianElucid biology. All Rights Reserved.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Twitter">Twitter/X</a>
+        <a href="#" aria-label="ResearchGate">ResearchGate</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <ul class="legal-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu() {
+  const nav = document.querySelector('.main-header nav ul.menu');
+  nav.classList.toggle('open');
+}
+</script>
+</body>
+</html>
